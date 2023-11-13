@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>테스트페이지</title>
+  <link rel="stylesheet" href="test.css" />
+</head>
+<body>
+  <header>
+    <div tabindex="0" id="hamburger" role="button" aria-label="전체메뉴">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div tabindex="0" id="sign_up_btn" ><span>회원가입</span></div>
+
+    <nav>
+    <div id="main_menu">
+      <ul id="menu_item">
+        <li class="list_item"><a id="i_m_c_1" href="#">html이란</a></li>
+        <li class="list_item"><a id="i_m_c_2" href="#">안드로이드 접근성 기능의 장점과 단점</a></li>
+        <li class="list_item"><a id="i_m_c_3" href="#">IOS 접근성 기능의 장점과 단점</a></li>
+        <li class="list_item"><a id="i_m_c_4" href="#">표형태 문서</a></li>
+        <li class="list_item"><a id="i_m_c_5" href="#">이미지형태 문서</a></li>   
+      </ul>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    <div tabindex="0" id="sign_up_page">
+      <h1>회원가입</h1>
+
+      <form action="/action_page.php" method="post">
+        <div class="form-group">
+          <label for="nam">이름</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">제출</button>
+      </form>
+    
+
+    </div>
+</main>
+
+  <section>
+    <div tabindex="0" id="main_contents_1">
+      <h1>HTML이란</h1>
+      <p>HTML은 HyperText Markup Language의 약자로, <br/>
+        웹 페이지를 구성하는 데 사용되는 마크업 언어이다.</p>
+      <p>HTML은 웹 브라우저에게 문서의 구조와 의미를 전달하기 위해 사용된다.<br/>
+        여기서 "마크업"이란 텍스트에 태그 등의 표시를 추가하여 문서의 구조와 서식을 정의하는 것을 의미한다.</p>
+
+      <p>HTML 문서는 일련의 요소(Element)들로 구성 되며. <br/>
+        각 요소는 태그(Tag)로 표현되고, 시작 태그와 종료 태그 사이에 내용(Content)이 위치할 수 있다.</p>
+    </div>
+    <div tabindex="0" id="main_contents_2">
+      <h1>안드로이드 접근성 기능의 장점과 단점</h1>
+      <p>스마트폰의 시각 지원 기능 살펴보면 크게 두 가지로 나눌 수 있다.</p>
+      <p>첫 째는 확대 기능, 둘 째는 스크린리더 기능이다.</p>
+      <p>확대 기능은 화면 자체의 비율을 크게 하여 시렬이 낮은 사용자로 하여금 화면 내의콘텐츠 정보를 좀 더 쉽게 식별하게 해 주는 기능인데<br/>
+      안드로이드의 확대 기능의 경우 실행 방법이 몇 가지 있으나 그 중 가장 추천하는 방식은 한 손가락으로 화면 세 번 터치이다.</p>
+    </div>
+    <div tabindex="0" id="main_contents_3">
+      <h1>IOS 접근성 기능의 장점과 단점</h1>
+      <p>최적화가 잘되었어, 안드로이드에 비해 반응속도가 빠르며</p>
+      <p>접근성 기능중 가장 많을 비중을 찾이하는 스크린리더의 사용도 안드로이드에 비해 쾌적한 편이다. <br/> 반면 확대 기능의 경우 제스처가 안드로이드에 비해 성가신 편이기에 저시력 사용자의 경우 화면 확대 사용에 불편함을 느낄 수 있다.</p>
+    </div>
+    <div tabindex="0" id="main_contents_4">
+      <h1>표형태 문서</h1>
+      <table aria-label="신상정보표">
+        <tr>
+          <td>이름</td><td>나이</td><td>직업</td><td>장비</td>
+        </tr>
+        <tr>
+          <td>댕댕이</td><td>30</td><td>건달</td><td>주먹</td>
+        </tr>
+        <tr>
+          <td>쩔쩔이</td><td>25</td><td>프로게이머</td><td>스마트폰</td>
+        </tr>
+        <tr>
+          <td>갈갈이</td><td>49</td><td>프로건달</td><td>손목보호대</td>
+        </tr>
+      </table>
+    </div>
+
+
+  <div tabindex="0" id="main_contents_5" class="gallery">
+      <h1>이미지문서</h1>
+      <div class="photo">
+        <img tabindex="0" src="img/1.png" alt="해가 저물어가는 그림" />
+      </div>
+      <div  id="photo2" class="photo">
+        <img tabindex="0" src="img/2.png" alt="재생버튼이 그려진 그림, 클릭시 음성이 재생 됩니다." />
+      </div>
+      <div id="photo3" class="photo">
+        <img tabindex="0" src="img/3.png" role="link" aria-label="구글 유니폼을 입은 레고사람, 클릭시 구글창 열림">
+      </div>
+      <div class="photo">
+        <a tabindex="-1" href="https://www.youtube.com"><img tabindex="0" src="img/4.png" alt="유튜브로고티를 입은 레고사람"></a>
+      </div>
+    </div>
+  
+
+
+
+  </section>
+
+
+
+  <div id="announcer" class="for-a11y" aria-live="assertive"></div>  
+  <audio id="sound">
+    <source src="audio/슈퍼 마리오 2007.mp3" type="audio/mp3" />
+  </audio>
+  
+  <script src="main.js" type="text/javascript"></script>
+</body>
+</html>

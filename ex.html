@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>테스트페이지</title>
+
+  <style>
+    *{margin:0; padding:0; box-sizing: border-box;}
+:root{
+  --bg-main:#1f1f1f;
+  --fg-main:#fafafa;
+  --hamburger-color:#fff;
+  color-scheme: dark;
+}
+html,body{width: 100%; height: 100%; color: var(--fg-main);
+background: var(--bg-main);}
+
+a{ text-decoration: none ; }
+
+#hamburger {
+  display: inline-flex; flex-direction: column;
+  width:2.5rem; height: 2rem;
+  cursor: pointer; padding: 0.2rem;
+  font-size:0px; gap: 0.25rem;
+}
+
+#hamburger span { width: 100%; flex:1; background-color: var(--hamburger-color);}
+#sign_up_btn{background:#fff; color:#000;  float:right; border: 1px solid #fff; margin:5px; padding: 10px;}
+#main_menu{width: 500px;}
+#main_menu li{color:#ff0; margin-top: 20px; font-weight:bold;}
+main {margin: 50px 0;}
+section{ margin-top: 50px;}
+section h1, main h1{margin-bottom: 20px;}
+section p{margin-top: 10px;}
+
+#main_menu{ display:none; }
+#main_menu.show { display:block; position:absolute; background:#000 ; border:1px solid ; height: 100%;}
+
+
+table {border-collapse: collapse;}
+td {border: 1px solid white; width: 100px; height: 100px;}
+
+
+.for-a11y { border: 0;
+  clip: rect(0 0 0 0); overflow: hidden; margin: -1px; padding: 0; position: absolute; width: 1px; height: 1px; }
+
+  /*가입폼*/
+  .form-group {
+    margin-bottom: 10px;
+  }
+  
+  .form-control {
+    width: 410px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .btn-primary {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+  }
+  #sign_up_page{display:none;}
+  #sign_up_page.show_sign_up_page{display:block;}
+
+  /*이미지*/
+  #main_contents_5.gallery.show_content{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 350px;
+  }
+  #main_contents_5.gallery.show_content h1{position: absolute;}
+
+.gallery img{width: 270px; height:270px; margin: 50px 30px;}
+.photo{height: 272px;}
+
+/*메인콘텐츠 이벤트 동작을 위한*/
+#main_contents_1, #main_contents_2, #main_contents_3, #main_contents_4, #main_contents_5{ display:none;}
+
+#main_contents_1.show_content,
+#main_contents_2.show_content,
+#main_contents_3.show_content,
+#main_contents_4.show_content{ display:block;}
+
+
+/* 안드로이드 */
+@media (max-width: 500px) {
+  body {
+    background:#009; height: 900px;
+  }
+body p{font-size: 12px;}  
+  #main_menu{width:400px;}
+  #main_menu li{font-size:16px;}
+  #main_contents_5.gallery.show_content h1{position: absolute;}
+  .gallery img.photo{width: 80px; height:80px; margin: 50px 10px;}
+}
+main {position:absoluet;}
+#name,#email,#password{width: 250px;}
+
+
+/* 모바일 */
+@media(max-width: 390px) {
+  body {
+    background:#707070; color:#000;
+  }
+  body p {
+    font-size: 12px;
+  }
+  #main_menu {
+    width: 350px;
+  }
+  #main_menu li {
+    font-size: 16px;
+  }
+  #main_contents_5.gallery.show_content h1{position: absolute;}
+  .gallery img.photo{
+    width: 70px;
+    height: 60px;
+    margin: 50px 6px;
+  }
+  
+
+  </style>
+</head>
+<body>
+  <header>
+    <div tabindex="0" id="hamburger" role="button" aria-label="전체메뉴">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div tabindex="0" id="sign_up_btn" ><span>회원가입</span></div>
+
+    <nav>
+    <div id="main_menu">
+      <ul id="menu_item">
+        <li class="list_item"><a id="i_m_c_1" href="#">html이란</a></li>
+        <li class="list_item"><a id="i_m_c_2" href="#">안드로이드 접근성 기능의 장점과 단점</a></li>
+        <li class="list_item"><a id="i_m_c_3" href="#">IOS 접근성 기능의 장점과 단점</a></li>
+        <li class="list_item"><a id="i_m_c_4" href="#">표형태 문서</a></li>
+        <li class="list_item"><a id="i_m_c_5" href="#">이미지형태 문서</a></li>   
+      </ul>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    <div tabindex="0" id="sign_up_page">
+      <h1>회원가입</h1>
+
+      <form action="/action_page.php" method="post">
+        <div class="form-group">
+          <label for="nam">이름</label>
+          <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="email">이메일</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="password">비밀번호</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+        <button type="submit" class="btn btn-primary">제출</button>
+      </form>
+    
+
+    </div>
+</main>
+
+  <section>
+    <div tabindex="0" id="main_contents_1">
+      <h1>HTML이란</h1>
+      <p>HTML은 HyperText Markup Language의 약자로, <br/>
+        웹 페이지를 구성하는 데 사용되는 마크업 언어이다.</p>
+      <p>HTML은 웹 브라우저에게 문서의 구조와 의미를 전달하기 위해 사용된다.<br/>
+        여기서 "마크업"이란 텍스트에 태그 등의 표시를 추가하여 문서의 구조와 서식을 정의하는 것을 의미한다.</p>
+
+      <p>HTML 문서는 일련의 요소(Element)들로 구성 되며. <br/>
+        각 요소는 태그(Tag)로 표현되고, 시작 태그와 종료 태그 사이에 내용(Content)이 위치할 수 있다.</p>
+    </div>
+    <div tabindex="0" id="main_contents_2">
+      <h1>안드로이드 접근성 기능의 장점과 단점</h1>
+      <p>스마트폰의 시각 지원 기능 살펴보면 크게 두 가지로 나눌 수 있다.</p>
+      <p>첫 째는 확대 기능, 둘 째는 스크린리더 기능이다.</p>
+      <p>확대 기능은 화면 자체의 비율을 크게 하여 시렬이 낮은 사용자로 하여금 화면 내의콘텐츠 정보를 좀 더 쉽게 식별하게 해 주는 기능인데<br/>
+      안드로이드의 확대 기능의 경우 실행 방법이 몇 가지 있으나 그 중 가장 추천하는 방식은 한 손가락으로 화면 세 번 터치이다.</p>
+    </div>
+    <div tabindex="0" id="main_contents_3">
+      <h1>IOS 접근성 기능의 장점과 단점</h1>
+      <p>최적화가 잘되었어, 안드로이드에 비해 반응속도가 빠르며</p>
+      <p>접근성 기능중 가장 많을 비중을 찾이하는 스크린리더의 사용도 안드로이드에 비해 쾌적한 편이다. <br/> 반면 확대 기능의 경우 제스처가 안드로이드에 비해 성가신 편이기에 저시력 사용자의 경우 화면 확대 사용에 불편함을 느낄 수 있다.</p>
+    </div>
+    <div tabindex="0" id="main_contents_4">
+      <h1>표형태 문서</h1>
+      <table aria-label="신상정보표">
+        <tr>
+          <td>이름</td><td>나이</td><td>직업</td><td>장비</td>
+        </tr>
+        <tr>
+          <td>댕댕이</td><td>30</td><td>건달</td><td>주먹</td>
+        </tr>
+        <tr>
+          <td>쩔쩔이</td><td>25</td><td>프로게이머</td><td>스마트폰</td>
+        </tr>
+        <tr>
+          <td>갈갈이</td><td>49</td><td>프로건달</td><td>손목보호대</td>
+        </tr>
+      </table>
+    </div>
+
+
+  <div tabindex="0" id="main_contents_5" class="gallery">
+      <h1>이미지문서</h1>
+      <div class="photo">
+        <img tabindex="0" src="img/1.png" alt="해가 저물어가는 그림" />
+      </div>
+      <div  id="photo2" class="photo">
+        <img tabindex="0" src="img/2.png" alt="재생버튼이 그려진 그림, 클릭시 음성이 재생 됩니다." />
+      </div>
+      <div id="photo3" class="photo">
+        <img tabindex="0" src="img/3.png" role="link" aria-label="구글 유니폼을 입은 레고사람, 클릭시 구글창 열림">
+      </div>
+      <div class="photo">
+        <a tabindex="-1" href="https://www.youtube.com"><img tabindex="0" src="img/4.png" alt="유튜브로고티를 입은 레고사람"></a>
+      </div>
+    </div>
+  
+
+
+
+  </section>
+
+
+
+  <div id="announcer" class="for-a11y" aria-live="assertive"></div>  
+  <audio id="sound">
+    <source src="audio/슈퍼 마리오 2007.mp3" type="audio/mp3" />
+  </audio>
+  <script type="text/javascript">
+    (() => {
+  let time;
+  const mainMenu = document.querySelector('#main_menu');
+  const btnHamburger = document.querySelector('#hamburger');
+  const listLinks = document.querySelectorAll('li>a');
+  const mainContents = document.querySelectorAll('section>div');
+  const announcer = document.querySelector("#announcer");
+  const signUpBtn = document.querySelector('#sign_up_btn');
+  const signUpPage = document.querySelector('#sign_up_page');
+  const photo3 = document.querySelector('#photo3');
+  const photo2 = document.querySelector('#photo2');
+  const sound = document.querySelector('#sound');
+
+  const toggleMainMenu = () => {
+    mainMenu.classList.toggle('show');
+    mainMenu.classList.contains('show') ?
+      document.querySelector('#i_m_c_1').focus() :
+      mainMenu.style.width = '300px';
+      mainMenu.style.zIndex = 10 ;
+  };
+
+  // 햄버거 버튼을 클릭하면 메인 메뉴를 열고, 이미 열려있는 경우 닫습니다.
+  const toggleMainMenuAndClose = () => {
+    if (!mainMenu.classList.contains('show')) {
+      toggleMainMenu();
+    } else {
+      mainMenu.classList.remove('show');
+      btnHamburger.focus();
+    }
+  };
+
+  btnHamburger.addEventListener('click', toggleMainMenuAndClose);
+  btnHamburger.addEventListener('keydown', (event) => {
+    switch (event.code) {
+      case 'Enter':
+      case 'Space':
+        event.preventDefault();
+        toggleMainMenuAndClose(event);
+        break;
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape' && mainMenu.classList.contains('show')) {
+      mainMenu.classList.remove('show');
+    }
+  });
+
+  document.addEventListener('click', (event) => {
+    if (mainMenu.classList.contains('show') && !event.target.closest('#main_menu') && !event.target.closest('#hamburger')) {
+      mainMenu.classList.remove('show');
+    }
+  }, { capture: true });
+
+  listLinks.forEach((link, index) => {
+    // 링크를 클릭했을 때
+    link.addEventListener('click', () => {
+      // 해당 인덱스에 대한 mainContents 요소의 show_content 클래스를 토글합니다.
+      toggleMainContent(index);
+    });
+
+    // 링크에서 엔터 키 또는 스페이스바 키를 눌렀을 때
+    link.addEventListener('keydown', (event) => {
+      if (event.code === 'Enter' || event.code === 'Space') {
+        event.preventDefault();
+        // 해당 인덱스에 대한 mainContents 요소의 show_content 클래스를 토글합니다.
+        toggleMainContent(index);
+      }
+    });
+  });
+
+  // mainContents 요소의 show_content 클래스를 토글하는 함수
+  function toggleMainContent(index) {
+    mainContents.forEach((content, contentIndex) => {
+      if (contentIndex === index) {
+        // 해당 인덱스에 대한 mainContents 요소에 show_content 클래스를 토글합니다.
+        content.classList.toggle('show_content');
+        if (content.classList.contains('show_content')) {
+          // mainContents가 열렸을 때 section으로 포커스를 이동합니다.
+          content.setAttribute('tabindex', '0');
+          content.focus();
+          signUpPage.classList.remove('show_sign_up_page');
+          announceForSR('콘텐츠 표시됨');
+        } else {
+          // mainContents가 닫혔을 때 section의 탭 포커스를 제거합니다.
+          content.setAttribute('tabindex', '-1'); // 수정: 탭 포커스를 제거하려면 -1로 설정합니다.
+        }
+      } else {
+        // 나머지 mainContents 요소들에는 show_content 클래스를 제거합니다.
+        content.classList.remove('show_content');
+        // 나머지 mainContents가 닫혔을 때 탭 포커스를 제거합니다.
+        content.setAttribute('tabindex', '-1'); // 수정: 탭 포커스를 제거하려면 -1로 설정합니다.
+      }
+    });
+    // 메인 메뉴를 닫습니다.
+    mainMenu.classList.remove('show');
+  }
+
+  // 상태를 음성으로 알리는 함수
+  function announceForSR(message) {
+    announcer.textContent = message;
+    time = setTimeout(() => {
+      clearTimeout(time);
+      announcer.textContent = "";
+    }, 100);
+  }
+
+  // 회원가입 창을 열고 닫는 함수
+  const toggleSignUpPage = () => {
+    if (!signUpPage.classList.contains('show_sign_up_page')) {
+      mainContents.forEach((content) =>{
+        content.classList.remove('show_content');
+      });
+      signUpPage.classList.add('show_sign_up_page');
+      signUpPage.focus();
+
+    } else {
+      signUpPage.classList.remove('show_sign_up_page');
+    }
+  }
+
+  // 이벤트 클릭 & 키다운 회원가입 페이지
+  signUpBtn.addEventListener('click', toggleSignUpPage);
+  signUpBtn.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter' || event.code === 'Space') {
+      event.preventDefault();
+      toggleSignUpPage();
+    }
+  });
+
+  // 이미지 클릭시 링크 열기
+  photo3.addEventListener('click', () => {
+    window.open("https://www.google.com", "_blank");
+  });
+
+  photo3.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter' || event.code === 'Space') {
+      event.preventDefault();
+      window.open("https://www.google.com", "_blank");
+    }
+  });
+
+  // photo2 클릭시 사운드 재생
+  function playSound() {
+    sound.currentTime = 0;
+    sound.play();
+
+    setTimeout(() => {
+      sound.pause();
+    }, 2000);
+  }
+
+  photo2.addEventListener('click', playSound);
+  photo2.addEventListener('keydown', (event) => {
+    if (event.code === 'Enter' || event.code === 'Space') {
+      event.preventDefault();
+      playSound();
+    }
+  }); 
+
+})();
+
+    </script>
+  
+</body>
+</html>
