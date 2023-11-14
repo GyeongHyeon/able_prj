@@ -54,7 +54,7 @@
 
   <section>
     <div tabindex="0" id="main_contents_1">
-      <div tabindex="0"><h1>HTML이란</h1></div>
+      <h1>HTML이란</h1>
       <p>HTML은 HyperText Markup Language의 약자로, <br/>
         웹 페이지를 구성하는 데 사용되는 마크업 언어이다.</p>
       <p>HTML은 웹 브라우저에게 문서의 구조와 의미를 전달하기 위해 사용된다.<br/>
@@ -106,7 +106,7 @@
         <img src="img/3.png" tabindex="0" role="link" aria-label="구글 유니폼을 입은 레고사람, 클릭시 구글창 열림">
       </div>
       <div class="photo">
-        <a href="https://www.youtube.com"><img tabindex="0" src="img/4.png" alt="유튜브로고티를 입은 레고사람">
+        <a class="떨거지" href="https://www.youtube.com"><img tabindex="0" src="img/4.png" alt="유튜브로고티를 입은 레고사람">
       </div>
     </div>
   
@@ -122,6 +122,29 @@
     <source src="audio/슈퍼 마리오 2007.mp3" type="audio/mp3" />
   </audio>
   
-  <script src="main.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript">
+    
+    const windowWidth = window.innerWidth;
+const pElements = document.querySelectorAll('div[id^="main_contents_"] p');
+const h1Elements = document.querySelectorAll('body h1');
+
+if (windowWidth <= 500) {
+  pElements.forEach((p) => {
+    p.setAttribute('tabindex', '0');
+  });
+  h1Elements.forEach((h1) => {
+    h1.setAttribute('tabindex', '0');
+  });
+} else {
+  pElements.forEach((p) => {
+    p.removeAttribute('tabindex');
+  });
+  h1Elements.forEach((h1) => {
+    h1.removeAttribute('tabindex');
+  });
+}
+
+  </script>
 </body>
 </html>

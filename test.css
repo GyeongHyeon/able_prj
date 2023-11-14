@@ -10,6 +10,8 @@ background: var(--bg-main);}
 
 a{ text-decoration: none ; }
 
+
+
 #hamburger {
   display: inline-flex; flex-direction: column;
   width:2.5rem; height: 2rem;
@@ -64,8 +66,9 @@ td {border: 1px solid white; width: 100px; height: 100px;}
     align-items: left;
     height: 100vh;
   }
-  #main_contents_5.gallery.show_content h1{position: absolute;}
-.gallery img{width:270px; height:270px; margin: 50px 30px;}
+#main_contents_5.gallery.show_content h1{position: absolute;}
+.photo{width: 300px; height: 300px; margin: 50px 30px; overflow: hidden;}
+.gallery img{width:270px; height:270px;}
 
 
 /*메인콘텐츠 이벤트 동작을 위한*/
@@ -77,23 +80,8 @@ td {border: 1px solid white; width: 100px; height: 100px;}
 #main_contents_4.show_content{ display:block;}
 
 
-/* 안드로이드 */
-@media (max-width: 500px) {
-  body {
-    background:#009; height: 900px;
-  }
-body p{font-size: 12px;}  
-  #main_menu{width:400px;}
-  #main_menu li{font-size:16px;}
-  #main_contents_5.gallery.show_content h1{position: absolute;}
-  .gallery img{width: 80px; height:80px; margin: 50px 10px;}
-}
-main {position:absoluet;}
-#name,#email,#password{width: 250px; tabindex:0;}
-
-
-/* IOS */
-@media screen and (max-width: 400px) {
+/* 모바일 */
+@media screen and (max-width: 500px) {
   body {
     background:#707070; color:#000;
   }
@@ -107,9 +95,7 @@ main {position:absoluet;}
     font-size: 16px;
   }
   #main_contents_5.gallery.show_content h1{position: absolute;}
-  .gallery img {
-    width: 70px;
-    height: 60px;
-    margin: 50px 6px;
+  .photo{width: 100px; height: 100px; margin: 50px 6px; overflow: hidden;}
+  .gallery img {width: 70px; height: 70px;
   }
 }
