@@ -62,12 +62,11 @@ td {border: 1px solid white; width: 100px; height: 100px;}
     display: flex;
     justify-content: left;
     align-items: left;
-    height: 350px;
+    height: 100vh;
   }
   #main_contents_5.gallery.show_content h1{position: absolute;}
+.gallery img{width:270px; height:270px; margin: 50px 30px;}
 
-.gallery img{width: 270px; height:270px; margin: 50px 30px;}
-.photo{height: 272px;}
 
 /*메인콘텐츠 이벤트 동작을 위한*/
 #main_contents_1, #main_contents_2, #main_contents_3, #main_contents_4, #main_contents_5{ display:none;}
@@ -87,14 +86,14 @@ body p{font-size: 12px;}
   #main_menu{width:400px;}
   #main_menu li{font-size:16px;}
   #main_contents_5.gallery.show_content h1{position: absolute;}
-  .gallery img.photo{width: 80px; height:80px; margin: 50px 10px;}
+  .gallery img{width: 80px; height:80px; margin: 50px 10px;}
 }
 main {position:absoluet;}
-#name,#email,#password{width: 250px;}
+#name,#email,#password{width: 250px; tabindex:0;}
 
 
-/* 모바일 */
-@media(max-width: 390px) {
+/* IOS */
+@media(max-width: 400px) {
   body {
     background:#707070; color:#000;
   }
@@ -108,9 +107,9 @@ main {position:absoluet;}
     font-size: 16px;
   }
   #main_contents_5.gallery.show_content h1{position: absolute;}
-  .gallery img.photo{
+  .gallery img {
     width: 70px;
     height: 60px;
     margin: 50px 6px;
   }
-  
+}

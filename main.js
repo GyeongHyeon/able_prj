@@ -16,7 +16,6 @@
     mainMenu.classList.contains('show') ?
       document.querySelector('#i_m_c_1').focus() :
       mainMenu.style.width = '300px';
-      mainMenu.style.zIndex = 10 ;
   };
 
   // 햄버거 버튼을 클릭하면 메인 메뉴를 열고, 이미 열려있는 경우 닫습니다.
@@ -25,7 +24,6 @@
       toggleMainMenu();
     } else {
       mainMenu.classList.remove('show');
-      btnHamburger.focus();
     }
   };
 
@@ -83,13 +81,13 @@
           announceForSR('콘텐츠 표시됨');
         } else {
           // mainContents가 닫혔을 때 section의 탭 포커스를 제거합니다.
-          content.setAttribute('tabindex', '-1'); // 수정: 탭 포커스를 제거하려면 -1로 설정합니다.
+          content.setAttribute('tabindex', '0');
         }
       } else {
         // 나머지 mainContents 요소들에는 show_content 클래스를 제거합니다.
         content.classList.remove('show_content');
         // 나머지 mainContents가 닫혔을 때 탭 포커스를 제거합니다.
-        content.setAttribute('tabindex', '-1'); // 수정: 탭 포커스를 제거하려면 -1로 설정합니다.
+        content.setAttribute('tabindex', '0');
       }
     });
     // 메인 메뉴를 닫습니다.
@@ -117,7 +115,7 @@
     } else {
       signUpPage.classList.remove('show_sign_up_page');
     }
-  }
+  };
 
   // 이벤트 클릭 & 키다운 회원가입 페이지
   signUpBtn.addEventListener('click', toggleSignUpPage);
@@ -147,7 +145,7 @@
 
     setTimeout(() => {
       sound.pause();
-    }, 2000);
+    }, 3000);
   }
 
   photo2.addEventListener('click', playSound);
@@ -156,6 +154,6 @@
       event.preventDefault();
       playSound();
     }
-  }); 
+  });
 
 })();
