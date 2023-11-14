@@ -93,7 +93,7 @@ main {position:absoluet;}
 
 
 /* IOS */
-@media(max-width: 400px) {
+@media screen and (max-width: 400px) {
   body {
     background:#707070; color:#000;
   }
