@@ -81,7 +81,7 @@ td {border: 1px solid white; width: 100px; height: 100px;}
 
 /* 모바일 */
 @media screen and (max-width: 500px) {
-  body {
+  body {width:100%; height:100%;
     background:#707070; color:#000;
   }
   body p {
