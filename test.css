@@ -18,12 +18,11 @@ a{ text-decoration: none ; }
   cursor: pointer; padding: 0.2rem;
   font-size:0px; gap: 0.25rem;
 }
-#hamburger:focus, #hamburger:hover{width:5rem; height: 4rem;}
 #hamburger span { width: 100%; flex:1; background-color: var(--hamburger-color);}
 #sign_up_btn{background:#fff; color:#000;  float:right; border: 1px solid #fff; margin:5px; padding: 10px;}
 #sign_up_btn:focus, #sign_up_btn:hover{background-color: #0a0; color:#fff; border: 7px solid #fff;}
-#main_menu{width: 500px;}
-#main_menu li{color:#ff0; margin-top: 20px; font-weight:bold;}
+#main_menu{width: 500px; z-index:1; overflow: hidden;}
+#main_menu li{color:#ff0; margin: 20px 30px; font-weight:bold;}
 main {margin: 50px 0;}
 section{ margin-top: 50px;}
 section h1, main h1{margin-bottom: 20px;}
@@ -91,8 +90,17 @@ td {border: 1px solid white; width: 100px; height: 100px;}
     width: 350px;
   }
   #main_menu li {
-    font-size: 16px;
+    font-size: 13px;
   }
+
+  .form-control {
+    display: block;
+    width: 250px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
   #main_contents_5.gallery.show_content h1{position: absolute;}
   .photo{width: 100px; height: 100px; margin: 50px 10%; overflow: hidden;}
   .gallery img {width: 70px; height: 70px;
